@@ -1,0 +1,12 @@
+<p>list-entreprise works!</p>
+
+<div *ngFor="let entreprise of detailEntreprise">
+
+    {{entreprise.id}}
+    {{entreprise.raisonSociale}}
+    {{entreprise.adresse}}
+    {{entreprise.secteur}}
+    {{entreprise.nbrEmployee}}
+    {{entreprise.nbrPostes}}
+  <a [routerLink]="['/entreprise/', entreprise.id]" >Go to detail</a>
+</div>

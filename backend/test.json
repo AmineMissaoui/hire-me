@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "raisonSociale": "ODDO BHF",
+        "adresse": "Lac 2",
+        "secteur": "Banking",
+        "nbrEmployee": 2500,
+        "nbrPostes": 30
+    }
+]
