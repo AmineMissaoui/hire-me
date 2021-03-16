@@ -1,12 +1,14 @@
-<form #myForm="ngForm">
+<form>
   <label>test</label>
-  <input type="text" name="Nom" #nom="ngModel" placeholder="Name" ngModel required minlength="10">
-  <input type="text" name="Adresse" placeholder="Price" ngModel required>
-  <input type="number" name="Nombre d'employés" placeholder="Quantity" min="0" ngModel required>
-  <div *ngIf="myForm.invalid">
+  <input type="text" name="Nom"  placeholder="Name" [(ngModel)]="Entreprise.raisonSociale" required minlength="10">
+  <input type="text" name="Adresse" placeholder="Price" [(ngModel)]="Entreprise.adresse" required>
+  <input type="number" name="Nombre employes" placeholder="Nombre d'employés"  [(ngModel)]="Entreprise.nbrEmployee" required>
+  <input type="number" name="Nombre postes" placeholder="Nombre de postes" [(ngModel)]="Entreprise.nbrPostes" >
+  <input type="text" name="Secteur" placeholder="Secteur" [(ngModel)]="Entreprise.secteur" >
+  <!-- <div *ngIf="myForm.invalid">
     <div *ngIf="nom.errors.minlength">
       minlength
     </div>
-  </div>
-  <input type="submit" value="send" [disabled]="myForm.invalid">
+  </div> -->
+  <input type="submit" value="send" (click)="save()">
 </form>

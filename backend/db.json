@@ -1,0 +1,20 @@
+{
+  "entreprise": [
+    {
+      "id": 1,
+      "raisonSociale": "ODDO BHF",
+      "adresse": "Lac 2",
+      "secteur": "Banking",
+      "nbrEmployee": 2500,
+      "nbrPostes": 30
+    },
+    {
+      "raisonSociale": "vermeg",
+      "adresse": "test",
+      "nbrEmployee": 12312,
+      "nbrPostes": 11,
+      "secteur": "IT",
+      "id": 2
+    }
+  ]
+}

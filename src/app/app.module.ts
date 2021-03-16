@@ -31,7 +31,8 @@ import { ListEntrepriseComponent } from './list-entreprise/list-entreprise.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

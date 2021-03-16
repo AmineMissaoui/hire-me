@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Entreprise } from '../model/entreprise.model';
+import { EntrepriseService } from '../shared/entreprise.service';
 
 @Component({
   selector: 'app-list-entreprise',
@@ -8,9 +10,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListEntrepriseComponent implements OnInit {
 
   @Input() detailEntreprise;
-  constructor() { }
-
+  listEntreprise ;
+  constructor(private _entrepriseService: EntrepriseService) { }
+  
   ngOnInit(): void {
+    this._entrepriseService.getEntreprise().subscribe(
+       (data) => this.listEntreprise = data);
   }
+
 
 }
