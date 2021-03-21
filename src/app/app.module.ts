@@ -14,6 +14,9 @@ import { AddEntrepriseComponent } from './add-entreprise/add-entreprise.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ListEntrepriseComponent } from './list-entreprise/list-entreprise.component';
+import { UpdateEntrepriseComponent } from './update-entreprise/update-entreprise.component';
+import { DeleteEntrepriseComponent } from './delete-entreprise/delete-entreprise.component';
+import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector/search-entreprise-by-sector.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ListEntrepriseComponent } from './list-entreprise/list-entreprise.compo
     AddEntrepriseComponent,
     NotFoundComponent,
     HomeComponent,
-    ListEntrepriseComponent
+    ListEntrepriseComponent,
+    UpdateEntrepriseComponent,
+    DeleteEntrepriseComponent,
+    SearchEntrepriseBySectorComponent
   ],
   imports: [
     BrowserModule,

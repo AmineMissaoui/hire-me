@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Entreprise } from '../model/entreprise.model';
-import { EntrepriseService } from '../shared/entreprise.service';
 
 @Component({
   selector: 'app-list-entreprise',
@@ -9,13 +9,19 @@ import { EntrepriseService } from '../shared/entreprise.service';
 })
 export class ListEntrepriseComponent implements OnInit {
 
-  @Input() detailEntreprise;
-  listEntreprise ;
-  constructor(private _entrepriseService: EntrepriseService) { }
+  @Input() listEntreprise;
+  @Input() listSectors;
+  searchResult ='all';
+
+  constructor(private _router: Router) { }
   
   ngOnInit(): void {
-    this._entrepriseService.getEntreprise().subscribe(
-       (data) => this.listEntreprise = data);
+
+  }
+
+  selectOption(value){
+    console.log(value);
+      this.searchResult = value;
   }
 
 

@@ -30,7 +30,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/scss/styles.scss",
-              "src/scss/theme.scss"
+              "src/scss/theme.scss",
+              "src/scss/icons.scss"
             ],
             "scripts": []
           },
@@ -96,7 +97,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/scss/styles.scss",
-              "src/scss/theme.scss"
+              "src/scss/theme.scss",
+              "src/scss/icons.scss"
             ],
             "scripts": []
           }

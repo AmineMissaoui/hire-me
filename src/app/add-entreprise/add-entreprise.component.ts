@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Entreprise } from '../model/entreprise.model';
 import { EntrepriseService } from '../shared/entreprise.service';
 
@@ -9,14 +11,16 @@ import { EntrepriseService } from '../shared/entreprise.service';
 })
 export class AddEntrepriseComponent implements OnInit {
   Entreprise : Entreprise;
-  constructor(private _entrepriseService: EntrepriseService) { }
+  constructor(private _entrepriseService: EntrepriseService, private _router: Router) { }
 
   ngOnInit(): void {
     this.Entreprise = new Entreprise();
   }
 
-  save(){
+  save(myForm : NgForm){
     this._entrepriseService.addEntreprise(this.Entreprise).subscribe();
+    myForm.reset();
+    this._router.navigate(['./entreprise']);
   }
 
 }

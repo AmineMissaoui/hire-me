@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Entreprise } from '../model/entreprise.model';
+import { Sector } from '../model/sector';
+import { EntrepriseService } from '../shared/entreprise.service';
 
 @Component({
   selector: 'app-entreprise',
@@ -7,19 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntrepriseComponent implements OnInit {
 
-  listeEntreprises = [
-    {id: 1, raisonSociale: ' Entreprise 1',
-    adresse: 'Adresse Entreprise 1', secteur: 'IT', nbrEmployee: 1, nbrPostes : 1},
-
-    {id: 2, raisonSociale: ' Entreprise 2',
-    adresse: 'Adresse Entreprise 2', secteur: 'IT', nbrEmployee: 1, nbrPostes : 1},
-
-    {id: 3, raisonSociale: ' Entreprise 3',
-    adresse: 'Adresse Entreprise 3', secteur: 'IT', nbrEmployee: 1, nbrPostes : 1},
-   ];
-  constructor() { }
+  listEntreprise : Entreprise ;
+  listSectors : Sector;
+  constructor(private _entrepriseService: EntrepriseService) { }
 
   ngOnInit(): void {
+    this._entrepriseService.getEntreprise().subscribe(
+      data => this.listEntreprise = data);
+      this._entrepriseService.getSectors().subscribe( data => {
+        this.listSectors = data;
+      })
   }
 
 }

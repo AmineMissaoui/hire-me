@@ -2,7 +2,8 @@ export class Entreprise {
     id: number;
     raisonSociale: string;
     adresse: string;
-    secteur: string;
+    secteurId: number;
     nbrEmployee: number;
     nbrPostes: number;
+    description: string;
 }
