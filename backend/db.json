@@ -1,15 +1,6 @@
 {
   "entreprise": [
     {
-      "raisonSociale": "oddo bhf",
-      "adresse": "lac10",
-      "nbrEmployee": 3000,
-      "nbrPostes": 500,
-      "secteurId": "1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor.",
-      "id": 9
-    },
-    {
       "raisonSociale": "lipp",
       "adresse": "chageya",
       "nbrEmployee": 200,
@@ -45,6 +36,15 @@
     {
       "id": 2,
       "name": "Banking"
+    }
+  ],
+  "job": [
+    {
+      "title": "Graphic designer",
+      "entrepriseId": 12,
+      "secteurId": 1,
+      "description": "test",
+      "id": 2
     }
   ]
 }

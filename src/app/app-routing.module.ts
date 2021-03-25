@@ -66,6 +66,8 @@ const routes: Routes = [{
     path: 'login',
     component: LoginComponent
   },
+    { path: 'jobs', loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule) },
+    { path: 'job-seeker', loadChildren: () => import('./job-seeker/job-seeker.module').then(m => m.JobSeekerModule) },
   // {
   //   path: '**',
   //   component: NotFoundComponent,

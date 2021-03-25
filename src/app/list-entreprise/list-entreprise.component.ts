@@ -14,15 +14,13 @@ export class ListEntrepriseComponent implements OnInit {
   searchResult ='all';
 
   constructor(private _router: Router) { }
-  
+
   ngOnInit(): void {
 
   }
 
   selectOption(value){
-    console.log(value);
       this.searchResult = value;
   }
-
 
 }

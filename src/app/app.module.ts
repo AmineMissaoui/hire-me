@@ -17,6 +17,8 @@ import { ListEntrepriseComponent } from './list-entreprise/list-entreprise.compo
 import { UpdateEntrepriseComponent } from './update-entreprise/update-entreprise.component';
 import { DeleteEntrepriseComponent } from './delete-entreprise/delete-entreprise.component';
 import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector/search-entreprise-by-sector.component';
+import { JobsModule } from './jobs/jobs.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,12 @@ import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    JobsModule,
+    LayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[NavComponent]
 })
 export class AppModule { }

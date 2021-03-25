@@ -1,0 +1,67 @@
+<app-header></app-header>
+<div class="page-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="inner-header">
+                  <h3>Add Job</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-12 col-xs-12">
+              <div class="post-job box">
+                  <h3 class="job-title">Update Job</h3>
+                  <form class="form-ad" #updateForm="ngForm">
+                      <div class="form-group">
+                          <label class="control-label">Title</label>
+                          <input type="text" class="form-control" name="title"  placeholder="Name" [(ngModel)]="jobDetail.title" required>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label">entrepriseId</label>
+                          <input type="number" class="form-control" name="entrepriseId" placeholder="entrepriseId" [(ngModel)]="jobDetail.entrepriseId">
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label">secteurId</label>
+                          <input class="form-control" type="number" name="secteurId" placeholder="secteurId"  [(ngModel)]="jobDetail.secteurId">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Nombre d'employees</label>
+                        <input class="form-control" type="number" name="secteurId" placeholder="secteurId" [(ngModel)]="jobDetail.secteurId">
+                    </div>
+
+                      <div class="form-group">
+                          <label class="control-label">Category</label>
+                          <div class="search-category-container">
+                              <label class="styled-select">
+                                  <select class="dropdown-product selectpicker">
+                                      <option>All Categories</option>
+                                      <option>Finance</option>
+                                      <option>IT & Engineering</option>
+                                      <option>Education/Training</option>
+                                      <option>Art/Design</option>
+                                      <option>Sale/Markting</option>
+                                      <option>Healthcare</option>
+                                      <option>Science</option>
+                                      <option>Food Services</option>
+                                  </select>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">description</label>
+                        <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="jobDetail.description">
+                        </textarea>
+                    </div>
+                      <input type="submit" value="send"  class="btn btn-common" (click)="save(updateForm)">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

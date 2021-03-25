@@ -17,7 +17,6 @@ export class DeleteEntrepriseComponent implements OnInit {
       this._entrepriseService.deleteEntreprise(this.entrepriseId).subscribe();
       this._router.navigate(['./entreprise']);
     })
-
 }
 
 }

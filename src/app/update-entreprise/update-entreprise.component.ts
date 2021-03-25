@@ -37,7 +37,6 @@ export class UpdateEntrepriseComponent implements OnInit {
       secteurId : myForm.value.secteurId
     }
 
-    console.log(updateEntreprise);
 
     this._entrepriseService.updateEntreprise(updateEntreprise, this.entrepriseId ).subscribe();
     myForm.reset();
