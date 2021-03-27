@@ -1,1 +1,84 @@
-<p>update-job-seeker works!</p>
+<app-header></app-header>
+<div class="page-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="inner-header">
+                  <h3>Add Job</h3>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-12 col-xs-12">
+              <div class="post-job box">
+                  <h3 class="job-title">Add Job</h3>
+                  <form class="form-ad" #updateForm="ngForm">
+                      <div class="form-group">
+                          <label class="control-label">Full name</label>
+                          <input type="text" class="form-control" name="fullName"  placeholder="Full name" [(ngModel)]="jobSeekerDetail.fullName" required>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label">Profession</label>
+                          <input type="text" class="form-control" name="profession" placeholder="Profession" [(ngModel)]="jobSeekerDetail.profession">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Current company</label>
+                        <input type="text" class="form-control" name="currentCompany" placeholder="Current company" [(ngModel)]="jobSeekerDetail.currentCompany">
+                    </div>
+                      <div class="form-group">
+                          <label class="control-label">adresse</label>
+                          <input class="form-control" type="text" name="adresse" placeholder="adresse"  [(ngModel)]="jobSeekerDetail.adresse">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Phone number</label>
+                        <input class="form-control" type="text" name="phoneNumber" placeholder="phoneNumber" [(ngModel)]="jobSeekerDetail.phoneNumber">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Facebook profile</label>
+                        <input class="form-control" type="text" name="facebookLink" placeholder="facebookLink" [(ngModel)]="jobSeekerDetail.facebookLink">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Twitter profile</label>
+                        <input class="form-control" type="text" name="twitterLink" placeholder="twitterLink" [(ngModel)]="jobSeekerDetail.twitterLink">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">LinkedIn profile</label>
+                        <input class="form-control" type="text" name="linkedInLink" placeholder="linkedInLink" [(ngModel)]="jobSeekerDetail.linkedInLink">
+                    </div>
+
+                      <div class="form-group">
+                          <label class="control-label">Category</label>
+                          <div class="search-category-container">
+                              <label class="styled-select">
+                                  <select class="dropdown-product selectpicker">
+                                      <option>All Categories</option>
+                                      <option>Finance</option>
+                                      <option>IT & Engineering</option>
+                                      <option>Education/Training</option>
+                                      <option>Art/Design</option>
+                                      <option>Sale/Markting</option>
+                                      <option>Healthcare</option>
+                                      <option>Science</option>
+                                      <option>Food Services</option>
+                                  </select>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">description</label>
+                        <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="jobSeekerDetail.description">
+                        </textarea>
+                    </div>
+                      <input type="submit" value="send"  class="btn btn-common" (click)="save(updateForm)">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<app-footer></app-footer>

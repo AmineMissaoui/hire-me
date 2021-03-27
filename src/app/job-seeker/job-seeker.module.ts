@@ -8,13 +8,17 @@ import { DeleteJobSeekerComponent } from './delete-job-seeker/delete-job-seeker.
 import { UpdateJobSeekerComponent } from './update-job-seeker/update-job-seeker.component';
 import { DetailJobSeekerComponent } from './detail-job-seeker/detail-job-seeker.component';
 import { ListJobSeekerComponent } from './list-job-seeker/list-job-seeker.component';
+import { LayoutModule } from '../layout/layout.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [JobSeekerComponent, AddJobSeekerComponent, DeleteJobSeekerComponent, UpdateJobSeekerComponent, DetailJobSeekerComponent, ListJobSeekerComponent],
   imports: [
     CommonModule,
-    JobSeekerRoutingModule
+    JobSeekerRoutingModule,
+    LayoutModule,
+    FormsModule
   ]
 })
 export class JobSeekerModule { }

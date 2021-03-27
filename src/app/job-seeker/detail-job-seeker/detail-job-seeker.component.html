@@ -1,23 +1,29 @@
+
 <div class="inner-box my-resume">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-end">
+            <a class=" btn btn-common mr-2" [routerLink]="['/update-job-seeker/', jobSeekerId]" >Update</a>
+            <a class=" btn btn-common" [routerLink]="['/delete-job-seeker/', jobSeekerId]" >Delete</a>
+        </div>
+      </div>
     <div class="author-resume">
         <div class="thumb">
             <img src="assets/img/resume/img-1.png" alt="">
         </div>
         <div class="author-info">
             <h3>{{jobSeekerDetail.fullName}}</h3>
-            <p class="sub-title">UI/UX Designer</p>
-            <p><span class="address"><i class="lni-map-marker"></i>Mahattan, NYC, USA</span> <span><i class="ti-phone"></i>(+01) 211-123-5678</span></p>
+            <p class="sub-title">{{jobSeekerDetail.profession}}</p>
+            <p><span class="address"><i class="lni-map-marker"></i>{{jobSeekerDetail.adresse}}</span> <span><i class="ti-phone"></i> {{jobSeekerDetail.phoneNumber}}</span></p>
             <div class="social-link">
-                <a href="#" class="Twitter"><i class="lni-twitter-filled"></i></a>
-                <a href="#" class="facebook"><i class="lni-facebook-filled"></i></a>
-                <a href="#" class="google"><i class="lni-google-plus"></i></a>
-                <a href="#" class="linkedin"><i class="lni-linkedin-fill"></i></a>
+                <a target="_blank" href="{{jobSeekerDetail.twitterLink}}" class="Twitter"><i class="lni-twitter-filled"></i></a>
+                <a target="_blank" href="{{jobSeekerDetail.facebookLink}}" class="facebook"><i class="lni-facebook-filled"></i></a>
+                <a target="_blank" href="{{jobSeekerDetail.linkedInLink}}" class="linkedin"><i class="lni-linkedin-fill"></i></a>
             </div>
         </div>
     </div>
     <div class="about-me item">
         <h3>About Me</h3>
-        <p>Nullam semper erat arcu, ac tincidunt sem venenatis vel. Curabitur a dolor ac ligula fermentum eusmod ac ullamcorper nulla. Integer blandit uitricies aliquam. Pellentesque quis dui varius, dapibus vilit id, ipsum. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet ruturm eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendririt eleif end tempor vitae augue. Fusce eget arcu et nibh dapibus maximus consectetur in est. Sed iaculis Luctus nibh sed veneatis. </p>
+        <p>{{jobSeekerDetail.description}}</p>
     </div>
     <div class="work-experence item">
         <h3>Work Experience</h3>

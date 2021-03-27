@@ -49,15 +49,16 @@
   ],
   "jobSeeker": [
     {
-      "id": 1,
-      "fullName" : "Amine Missaoui",
-      "profession": "Senior UX Designer",
-      "adresse": "Mourouj",
-      "phoneNumber": "22647885",
-      "facebookLink": "https://www.facebook.com/",
-      "twitterLink": "https://twitter.com/",
-      "linkedInLink": "https://linkedin.com/",
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "fullName": "Amine Missaoui",
+      "profession": "Intégrateur web",
+      "currentCompany": "ODDO BHF",
+      "adresse": "Mourouj 1",
+      "phoneNumber": "(+216) 27604006",
+      "facebookLink": "https://www.facebook.com/Amine",
+      "twitterLink": "https://www.twitter.com/Amine",
+      "linkedInLink": "https://www.linkedin.com/Amine",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor ultricies laoreet. Maecenas non magna quis odio mattis luctus. Praesent commodo semper aliquet. Integer a arcu purus. Duis vitae porttitor augue, in mollis ligula. Mauris non sollicitudin ante, eu molestie mi. Ut faucibus convallis leo. Mauris lorem ipsum, malesuada porttitor nisl hendrerit, tincidunt eleifend arcu. Sed in nisl est. Mauris venenatis dignissim dui, eu cursus felis. Ut a urna bibendum, sagittis sem quis, iaculis sapien. Etiam auctor lobortis orci, vel vulputate mauris mollis vel. Aliquam erat volutpat.",
+      "id": 1
     }
   ]
 }
