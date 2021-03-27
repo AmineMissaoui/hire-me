@@ -5,4 +5,5 @@ export class JobSeekerExperience {
     companyName: string;
     startDate: string;
     endDate: string;
+    description: string;
 }

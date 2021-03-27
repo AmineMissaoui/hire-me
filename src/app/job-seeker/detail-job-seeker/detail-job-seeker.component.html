@@ -8,7 +8,7 @@
       </div>
     <div class="author-resume">
         <div class="thumb">
-            <img src="assets/img/resume/img-1.png" alt="">
+            <img src="../../../assets/img/resume/img-1.png" alt="">
         </div>
         <div class="author-info">
             <h3>{{jobSeekerDetail.fullName}}</h3>
@@ -27,20 +27,20 @@
     </div>
     <div class="work-experence item">
         <h3>Work Experience</h3>
-        <h4>UI/UX Designer</h4>
-        <h5>Bannana INC.</h5>
-        <span class="date">Fab 2017-Present(5year)</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vero, dolores, officia quibusdam architecto sapiente eos voluptas odit ab veniam porro quae possimus itaque, quas! Tempora sequi nobis, atque incidunt!</p>
-        <p><a href="#">4 Projects</a></p>
-        <br>
-        <h4>UI Designer</h4>
-        <h5>Whale Creative</h5>
-        <span class="date">Fab 2017-Present(2year)</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vero, dolores, officia quibusdam architecto sapiente eos voluptas odit ab veniam porro quae possimus itaque, quas! Tempora sequi nobis, atque incidunt!</p>
-        <p><a href="#">4 Projects</a></p>
+        <div *ngFor=" let jobSeekerExperience of jobSeekerExperiences">
+            <h4>{{jobSeekerExperience.title}}</h4>
+            <h5>{{jobSeekerExperience.companyName}}</h5>
+            <span class="date">{{jobSeekerExperience.startDate}} - {{jobSeekerExperience.endDate}}</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vero, dolores, officia quibusdam architecto sapiente eos voluptas odit ab veniam porro quae possimus itaque, quas! Tempora sequi nobis, atque incidunt!</p>
+            <p><a href="#">4 Projects</a></p>
+            <br>
+        </div>
     </div>
     <div class="education item">
         <h3>Education</h3>
+        <div *ngFor="let jobSeekerEducation of jobSeekerEducations">
+            {{jobSeekerEducation.title}}
+        </div>
         <h4>Massachusetts Institute Of Technology</h4>
         <p>Bachelor of Computer Science</p>
         <span class="date">2010-2014</span>

@@ -27,12 +27,9 @@ export class SearchEntrepriseBySectorComponent implements OnInit {
 
     this.route.params.subscribe(data => {
       this.searchBySector = data.id;
-
-
+      
       this._entrepriseservice.searchBySector(this.searchBySector).subscribe(data => {
         this.listEntreprise = data;
-
-
       })
     })
   }
