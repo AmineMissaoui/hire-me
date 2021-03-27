@@ -19,6 +19,7 @@ import { DeleteEntrepriseComponent } from './delete-entreprise/delete-entreprise
 import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector/search-entreprise-by-sector.component';
 import { JobsModule } from './jobs/jobs.module';
 import { LayoutModule } from './layout/layout.module';
+import { JobSeekerModule } from './job-seeker/job-seeker.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LayoutModule } from './layout/layout.module';
     FormsModule,
     HttpClientModule,
     JobsModule,
-    LayoutModule
+    LayoutModule,
+    JobSeekerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

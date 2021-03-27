@@ -9,7 +9,7 @@ import { ListJobSeekerComponent } from './list-job-seeker/list-job-seeker.compon
 import { UpdateJobSeekerComponent } from './update-job-seeker/update-job-seeker.component';
 
 const routes: Routes = [
-  { path: 'job-seeker', component: JobSeekerComponent },
+  { path: '', component: JobSeekerComponent },
   { path: 'add-job-seeker', component: AddJobSeekerComponent },
   { path: 'delete-job-seeker/:id', component: DeleteJobSeekerComponent },
   { path: 'detail-job-seeker/:id', component: DetailJobSeekerComponent },

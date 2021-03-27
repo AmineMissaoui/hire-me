@@ -46,5 +46,18 @@
       "description": "test",
       "id": 2
     }
+  ],
+  "jobSeeker": [
+    {
+      "id": 1,
+      "fullName" : "Amine Missaoui",
+      "profession": "Senior UX Designer",
+      "adresse": "Mourouj",
+      "phoneNumber": "22647885",
+      "facebookLink": "https://www.facebook.com/",
+      "twitterLink": "https://twitter.com/",
+      "linkedInLink": "https://linkedin.com/",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
   ]
 }
