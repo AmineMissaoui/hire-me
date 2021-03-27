@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EntrepriseService } from '../shared/entreprise.service';
+import { EntrepriseService } from 'src/app/shared/entreprise.service';
 
 @Component({
   selector: 'app-delete-entreprise',

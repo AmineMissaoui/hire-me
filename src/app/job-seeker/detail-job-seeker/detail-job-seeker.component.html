@@ -39,14 +39,10 @@
     <div class="education item">
         <h3>Education</h3>
         <div *ngFor="let jobSeekerEducation of jobSeekerEducations">
-            {{jobSeekerEducation.title}}
-        </div>
-        <h4>Massachusetts Institute Of Technology</h4>
-        <p>Bachelor of Computer Science</p>
-        <span class="date">2010-2014</span>
+            
+            <h4>{{jobSeekerEducation.intituteName}}</h4>
+        <p>{{jobSeekerEducation.title}}</p>
+        <span class="date">{{jobSeekerEducation.startDate}} - {{jobSeekerEducation.endDate}}</span>
         <br>
-        <h4>Massachusetts Institute Of Technology</h4>
-        <p>Bachelor of Computer Science</p>
-        <span class="date">2010-2014</span>
     </div>
 </div>

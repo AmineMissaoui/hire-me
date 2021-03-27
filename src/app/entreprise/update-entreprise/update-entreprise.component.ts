@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Entreprise } from '../model/entreprise.model';
-import { EntrepriseService } from '../shared/entreprise.service';
+import { Entreprise } from 'src/app/model/entreprise.model';
+import { EntrepriseService } from 'src/app/shared/entreprise.service';
 
 @Component({
   selector: 'app-update-entreprise',
@@ -44,3 +44,4 @@ export class UpdateEntrepriseComponent implements OnInit {
   }
 
 }
+

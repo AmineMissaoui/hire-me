@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Entreprise } from '../model/entreprise.model';
 
 @Component({
   selector: 'app-list-entreprise',
@@ -22,5 +21,4 @@ export class ListEntrepriseComponent implements OnInit {
   selectOption(value){
       this.searchResult = value;
   }
-
 }

@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Entreprise } from '../model/entreprise.model';
-import { Sector } from '../model/sector.model';
-import { EntrepriseService } from '../shared/entreprise.service';
+import { Entreprise } from 'src/app/model/entreprise.model';
+import { Sector } from 'src/app/model/sector.model';
+import { EntrepriseService } from 'src/app/shared/entreprise.service';
 
 @Component({
   selector: 'app-search-entreprise-by-sector',

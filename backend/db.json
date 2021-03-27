@@ -17,15 +17,6 @@
       "secteurId": "1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor.",
       "id": 12
-    },
-    {
-      "raisonSociale": "dotSquare",
-      "adresse": "centre urbain nord",
-      "nbrEmployee": 2,
-      "nbrPostes": 0,
-      "secteurId": "1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor.",
-      "id": 13
     }
   ],
   "sector": [
@@ -59,7 +50,8 @@
       "linkedInLink": "https://www.linkedin.com/Amine",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor ultricies laoreet. Maecenas non magna quis odio mattis luctus. Praesent commodo semper aliquet. Integer a arcu purus. Duis vitae porttitor augue, in mollis ligula. Mauris non sollicitudin ante, eu molestie mi. Ut faucibus convallis leo. Mauris lorem ipsum, malesuada porttitor nisl hendrerit, tincidunt eleifend arcu. Sed in nisl est. Mauris venenatis dignissim dui, eu cursus felis. Ut a urna bibendum, sagittis sem quis, iaculis sapien. Etiam auctor lobortis orci, vel vulputate mauris mollis vel. Aliquam erat volutpat.",
       "id": 1
-    },{
+    },
+    {
       "fullName": "amira Missaoui",
       "profession": "Intégrateur web",
       "currentCompany": "ODDO BHF",
@@ -80,23 +72,25 @@
       "companyName": "Tanitoss",
       "startDate": 2012,
       "endDate": 2014,
-      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
-    },{
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
+    },
+    {
       "id": 2,
       "jobSeekerId": 1,
       "title": "Graphic designer",
       "companyName": "Lipp distrubution",
       "startDate": 2012,
       "endDate": 2014,
-      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
-    },{
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
+    },
+    {
       "id": 3,
       "jobSeekerId": 2,
       "title": "Graphic designer",
       "companyName": "Lipp distrubution",
       "startDate": 2012,
       "endDate": 2014,
-      "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor."
     }
   ],
   "education": [

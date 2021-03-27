@@ -9,7 +9,6 @@ import { EntrepriseService } from '../shared/entreprise.service';
   styleUrls: ['./entreprise.component.scss']
 })
 export class EntrepriseComponent implements OnInit {
-
   listEntreprise : Entreprise ;
   listSectors : Sector;
   constructor(private _entrepriseService: EntrepriseService) { }
@@ -17,6 +16,7 @@ export class EntrepriseComponent implements OnInit {
   ngOnInit(): void {
     this._entrepriseService.getEntreprise().subscribe(
       data => this.listEntreprise = data);
+      
       this._entrepriseService.getSectors().subscribe( data => {
         this.listSectors = data;
       })
