@@ -41,6 +41,11 @@ export class JobsService {
     return this.http.get<Jobs>(jobByIdUrl);
   }
 
+  getJobByEntrepriseId(entrepriseId): Observable<Jobs>{
+    const jobByEntrepriseIdUrl = this.url + '?entrepriseId=' + entrepriseId;
+    return this.http.get<Jobs>(jobByEntrepriseIdUrl);
+  }
+
   searchBySector(sectorId) : Observable<Jobs>{
     const jobUrl = this.url + '?secteurId=' + sectorId;
     return this.http.get<Jobs>(jobUrl);

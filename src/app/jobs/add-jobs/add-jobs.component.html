@@ -24,12 +24,16 @@
                       </div>
                       <div class="form-group">
                           <label class="control-label">entrepriseId</label>
-                          <input type="number" class="form-control" name="entrepriseId" placeholder="entrepriseId" [(ngModel)]="job.entrepriseId">
+                          <input type="number" class="form-control" name="entrepriseId" placeholder="entrepriseId" [(ngModel)]="job.entrepriseId" required>
                       </div>
                       <div class="form-group">
                           <label class="control-label">secteurId</label>
-                          <input class="form-control" type="number" name="secteurId" placeholder="secteurId"  [(ngModel)]="job.secteurId">
+                          <input class="form-control" type="number" name="secteurId" placeholder="secteurId"  [(ngModel)]="job.secteurId" required>
                       </div>
+                      <div class="form-group">
+                        <label class="control-label">nbrPostes</label>
+                        <input class="form-control" type="number" name="nbrPostes" placeholder="nbrPostes"  [(ngModel)]="job.nbrPostes">
+                    </div>
                       <div class="form-group">
                           <label class="control-label">Category</label>
                           <div class="search-category-container">
@@ -52,6 +56,10 @@
                         <label class="control-label">description</label>
                         <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="job.description">
                         </textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="nbrApplications" [(ngModel)]="job.nbrApplications">
+                        <input type="hidden" name="viewersNbr" [(ngModel)]="job.viewersNbr">
                     </div>
                       <input type="submit" value="send"  class="btn btn-common" (click)="save(addForm)">
                   </form>

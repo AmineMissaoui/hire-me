@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Entreprise } from 'src/app/model/entreprise.model';
+import { EntrepriseService } from 'src/app/shared/entreprise.service';
 
 @Component({
   selector: 'app-list-jobs',
@@ -9,10 +11,12 @@ export class ListJobsComponent implements OnInit {
   @Input() listJobs;
   @Input() listSectors;
   searchResult = 'all';
+  entreprise : Entreprise;
   @Output() increaseViewers = new EventEmitter();
-  constructor() { }
+  constructor(private _entrepriseService : EntrepriseService) { }
 
   ngOnInit(): void {
+
   }
 
   selectOption(value){

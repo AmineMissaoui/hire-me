@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Entreprise } from 'src/app/model/entreprise.model';
 import { Jobs } from 'src/app/model/jobs.model';
 import { EntrepriseService } from 'src/app/shared/entreprise.service';
 import { JobsService } from 'src/app/shared/jobs.service';
@@ -19,21 +20,31 @@ export class DetailJobsComponent implements OnInit {
   sectorName : string;
   recievedJob : Jobs;
   nbrApplications : number;
+  entreprise : Entreprise;
+  entrepriseId : number;
+  entrepriseName : string;
 
   constructor(private route: ActivatedRoute, private _jobsService: JobsService, private _entrepriseService : EntrepriseService, private _router : Router) { }
 
   ngOnInit(): void {
+
     
     this.route.params.subscribe(data => {
       this.jobId = data.id;
     });
 
+
+
     this._jobsService.viewJob(this.jobId).subscribe(data =>{
       this.jobDetail = data;
       this.sectorId = data.secteurId;
+      this.entrepriseId = data.entrepriseId;
       this._entrepriseService.getSectorsById(this.sectorId).subscribe(data => {
         this.sectorName = data[0].name;
       });
+      this._entrepriseService.getEntrepriseById(this.entrepriseId).subscribe(data => {
+        this.entrepriseName = data[0].raisonSociale;
+      })
     });
     
   }

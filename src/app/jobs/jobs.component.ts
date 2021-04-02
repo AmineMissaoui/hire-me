@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Entreprise } from '../model/entreprise.model';
 import { Jobs } from '../model/jobs.model';
 import { Sector } from '../model/sector.model';
 import { EntrepriseService } from '../shared/entreprise.service';
@@ -15,11 +16,20 @@ export class JobsComponent implements OnInit {
   recievedId : number;
   recievedJob : Jobs;
   viewersNbr : number;
+  entreprise : Entreprise;
+
   constructor(private _entrepriseService: EntrepriseService, private _jobsService: JobsService) { }
 
   ngOnInit(): void {
-    this._jobsService.getJobs().subscribe(
-      data => this.listJobs = data);
+
+    
+
+
+    this._jobsService.getJobs().subscribe(data => {
+      this.listJobs = data
+      console.log(this.listJobs);
+      });
+      
       this._entrepriseService.getSectors().subscribe( data => {
         this.listSectors = data;
       });

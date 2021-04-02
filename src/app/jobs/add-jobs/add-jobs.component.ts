@@ -12,18 +12,21 @@ import { JobsService } from 'src/app/shared/jobs.service';
 export class AddJobsComponent implements OnInit {
 
   job : Jobs;
-
+  nbrApplications : number ;
+  viewersNbr : number 
   constructor(private _jobsService: JobsService, private _router: Router) { }
 
   ngOnInit(): void {
     this.job = new Jobs();
+    this.job.nbrApplications = 0;
+    this.job.viewersNbr = 0;
   }
 
 
   save(myForm : NgForm){
     this._jobsService.addJobs(this.job).subscribe();
     myForm.reset();
-    this._router.navigate(['./entreprise']);
+    this._router.navigate(['./jobs']);
   }
 
 }

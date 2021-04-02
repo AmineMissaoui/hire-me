@@ -36,8 +36,8 @@
       "entrepriseId": 9,
       "nbrPostes": 10,
       "secteurId": 1,
-      "nbrApplications": 2,
-      "viewersNbr": 15,
+      "nbrApplications": 3,
+      "viewersNbr": 16,
       "id": 2
     },
     {
@@ -46,8 +46,8 @@
       "entrepriseId": 9,
       "nbrPostes": 10,
       "secteurId": 1,
-      "nbrApplications": 0,
-      "viewersNbr": 4,
+      "nbrApplications": 1,
+      "viewersNbr": 6,
       "id": 3
     },
     {
@@ -59,6 +59,26 @@
       "nbrApplications": 3,
       "viewersNbr": 3,
       "id": 4
+    },
+    {
+      "title": "Javascript developper",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum, orci quis tincidunt tristique, metus turpis consectetur ipsum, in consectetur nibh velit ut mi. Vestibulum euismod, lorem eu fermentum porta, felis velit vulputate sem, congue rutrum metus mi eu mauris. Integer aliquam interdum diam, non pulvinar ipsum euismod et. Vestibulum laoreet sed metus nec euismod. Vestibulum non imperdiet orci. Aenean id mauris eu velit mollis porttitor sollicitudin quis ex. Curabitur dolor nisi, euismod sit amet rhoncus et, semper sit amet metus. Mauris malesuada purus eu cursus elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pellentesque a urna non auctor. Proin vehicula dapibus risus, at cursus augue vehicula in. Nullam vel euismod purus, in cursus ipsum. Phasellus sed orci sit amet purus molestie consequat vitae vitae ante. Curabitur blandit blandit urna, eget pretium nisi mattis id.",
+      "entrepriseId": 9,
+      "nbrPostes": 3,
+      "secteurId": 1,
+      "nbrApplications": 0,
+      "viewersNbr": 2,
+      "id": 5
+    },
+    {
+      "nbrApplications": 0,
+      "viewersNbr": 0,
+      "title": "devOps engineer",
+      "entrepriseId": 9,
+      "secteurId": 1,
+      "nbrPostes": 2,
+      "description": "lipsum",
+      "id": 6
     }
   ],
   "jobSeeker": [
@@ -216,6 +236,11 @@
       "username": "admin",
       "password": "123456",
       "id": 18
+    },
+    {
+      "username": "admin",
+      "password": "123456",
+      "id": 19
     }
   ]
 }
