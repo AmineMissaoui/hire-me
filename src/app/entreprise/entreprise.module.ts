@@ -10,6 +10,8 @@ import { AddEntrepriseComponent } from './add-entreprise/add-entreprise.componen
 import { FormsModule } from '@angular/forms';
 import { UpdateEntrepriseComponent } from './update-entreprise/update-entreprise.component';
 import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector/search-entreprise-by-sector.component';
+import { LayoutModule } from '../layout/layout.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { SearchEntrepriseBySectorComponent } from './search-entreprise-by-sector
   imports: [
     CommonModule,
     EntrepriseRoutingModule,
-    FormsModule
+    FormsModule,
+    LayoutModule,
+    RouterModule
   ]
 })
 export class EntrepriseModule { }

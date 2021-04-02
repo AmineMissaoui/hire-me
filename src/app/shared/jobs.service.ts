@@ -36,6 +36,11 @@ export class JobsService {
     return this.http.delete<Jobs>(jobUrl);
   }
 
+  getJobById(jobId): Observable<Jobs>{
+    const jobByIdUrl = this.url + '?id=' + jobId;
+    return this.http.get<Jobs>(jobByIdUrl);
+  }
+
   searchBySector(sectorId) : Observable<Jobs>{
     const jobUrl = this.url + '?secteurId=' + sectorId;
     return this.http.get<Jobs>(jobUrl);
@@ -45,5 +50,7 @@ export class JobsService {
     const sectorUrl = 'http://localhost:3000/sector';
     return this.http.get<Sector>(sectorUrl);
   }
+
+  
 
 }

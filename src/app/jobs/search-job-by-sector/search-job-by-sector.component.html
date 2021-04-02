@@ -47,8 +47,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-1 col-md-2 col-xs-12">
-                              <a *ngIf="searchResult == 'all'" [routerLink]="['/entreprise/']" class="button"><i class="lni-search"></i></a>
-                              <a *ngIf="searchResult != 'all'" [routerLink]="['/sector/', searchResult]" class="button"><i class="lni-search"></i></a>
+                              <a *ngIf="searchResult == 'all'" [routerLink]="['/jobs/']" class="button"><i class="lni-search"></i></a>
+                              <a *ngIf="searchResult != 'all'" [routerLink]="['/sector-job/', searchResult]" class="button"><i class="lni-search"></i></a>
                             </div>
                         </div>
                     </form>
@@ -66,36 +66,35 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
         <div class="row">
-            <div *ngFor="let entreprise of listEntreprise" class="col-lg-6 col-md-12 col-xs-12">
-                <a class="job-listings-featured" [routerLink]="['/detail-entreprise/', entreprise.id]">
+            <div *ngFor="let job of listJobs" class="col-lg-6 col-md-12 col-xs-12">
+                <a class="job-listings-featured" [routerLink]="['/detail-job/' , job.id]">
                     <div class="row">
   
-                        <div class="col-lg-6 col-md-6 col-xs-12">
+                        <div class="col-lg-7 col-md-6 col-xs-12">
                             <div class="job-company-logo">
-                                <img src="../../../assets/img/features/img-1.jpg" alt="">
+                                <img src="../../../assets/img/features/job.jpg" alt="">
                             </div>
                             <div class="job-details">
-                                <h3>{{entreprise.raisonSociale}}</h3>
-                                <span class="company-neme">Secteur : {{entreprise.secteurId}}</span>
+                                <h3>{{job.title}}</h3>
                                 <div class="tags">
-                                    <span><i class="lni-map-marker"></i> {{entreprise.adresse}}</span><br>
-                                    <span><i class="lni-user"></i>Employees Number {{entreprise.nbrEmployee}}</span>
+                                    <span><i class="lni-user"></i>Available posts :  {{job.nbrPostes}}</span>
+                                    <br>
+                                      <span><i class="lni-user"></i>Aplicacion number : {{job.nbrApplications}}</span>
                                 </div>
                             </div>
                         </div>
   
-                        <div class="col-lg-6 col-md-6 col-xs-12 text-right">
+                        <div class="col-lg-5 col-md-6 col-xs-12 text-right">
                             <div class="tag-type">
                                 <div class="heart-icon">
-                                    <i class="lni-heart"></i>
+                                    <i class="lni-eye"></i> {{job.viewersNbr}}
                                 </div>
-                                <a [routerLink]="['/detail-entreprise/', entreprise.id]" > <span class="full-time">View details</span></a>
+                                <a [routerLink]="['/detail-job/', job.id]" > <span class="full-time">View details</span></a>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-  
         </div>
     </div>
   </section>

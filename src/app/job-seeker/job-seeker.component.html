@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div class="page-header">
     <div class="container">
         <div class="row">
@@ -29,7 +31,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-8 col-xs-12">
-                <app-detail-job-seeker></app-detail-job-seeker>
+                <app-detail-job-seeker (shareMyId)="getChildId($event)"></app-detail-job-seeker>
             </div>
         </div>
     </div>

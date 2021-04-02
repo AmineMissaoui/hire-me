@@ -30,12 +30,15 @@ export class UpdateJobsComponent implements OnInit {
 
   save(myForm : NgForm){
     const updateJob ={
-      raisonSociale : myForm.value.raisonSociale,
-      adresse : myForm.value.adresse,
-      nbrEmployee : myForm.value.nbrEmployee,
+      title : myForm.value.title,
+      description : myForm.value.description,
+      entrepriseId : myForm.value.entrepriseId,
       nbrPostes : myForm.value.nbrPostes,
-      secteurId : myForm.value.secteurId
+      secteurId : myForm.value.secteurId,
+      nbrApplications : this.jobDetail.nbrApplications,
+      viewersNbr : this.jobDetail.viewersNbr
     }
+
 
 
     this._jobsService.updateJob(updateJob, this.jobId ).subscribe();

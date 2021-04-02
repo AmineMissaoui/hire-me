@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
@@ -13,15 +12,16 @@ import { JobsModule } from './jobs/jobs.module';
 import { LayoutModule } from './layout/layout.module';
 import { JobSeekerModule } from './job-seeker/job-seeker.module';
 import { EntrepriseModule } from './entreprise/entreprise.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     NavComponent,
     FooterComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,8 @@ import { EntrepriseModule } from './entreprise/entreprise.module';
     JobsModule,
     LayoutModule,
     JobSeekerModule,
-    EntrepriseModule
+    EntrepriseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

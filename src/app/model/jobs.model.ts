@@ -5,4 +5,6 @@ export class Jobs {
     secteurId: number;
     entrepriseId: number;
     nbrPostes: number;
+    nbrApplications: number;
+    viewersNbr : number;
 }

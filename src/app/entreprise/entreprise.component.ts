@@ -19,7 +19,9 @@ export class EntrepriseComponent implements OnInit {
       
       this._entrepriseService.getSectors().subscribe( data => {
         this.listSectors = data;
-      })
+      });
+
+      
   }
 
 }

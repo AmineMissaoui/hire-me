@@ -10,6 +10,7 @@ import { DeleteJobsComponent } from './delete-jobs/delete-jobs.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutModule } from '../layout/layout.module';
 import { DetailJobsComponent } from './detail-jobs/detail-jobs.component';
+import { SearchJobBySectorComponent } from './search-job-by-sector/search-job-by-sector.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { DetailJobsComponent } from './detail-jobs/detail-jobs.component';
     AddJobsComponent, 
     ListJobsComponent, 
     UpdateJobsComponent, 
-    DeleteJobsComponent, DetailJobsComponent
+    DeleteJobsComponent, DetailJobsComponent, SearchJobBySectorComponent
   ],
   imports: [
     CommonModule,

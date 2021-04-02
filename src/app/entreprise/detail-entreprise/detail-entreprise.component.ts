@@ -13,6 +13,8 @@ export class DetailEntrepriseComponent implements OnInit {
   entrepriseId: Entreprise;
   entrepriseDetail : Entreprise;
 
+  sectorId : number;
+  sectorName : string;
 
   constructor(private route: ActivatedRoute, private _entrepriseService: EntrepriseService) { }
 
@@ -23,7 +25,15 @@ export class DetailEntrepriseComponent implements OnInit {
 
     this._entrepriseService.viewEntreprise(this.entrepriseId).subscribe(data =>{
       this.entrepriseDetail = data;
-    })
+      this.sectorId = data.secteurId;
+      this._entrepriseService.getSectorsById(this.sectorId).subscribe(data => {
+        this.sectorName = data[0].name;
+      })
+    });
+    
+
   }
+  
+  
 
 }

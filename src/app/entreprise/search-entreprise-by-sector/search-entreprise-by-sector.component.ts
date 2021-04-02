@@ -15,7 +15,7 @@ export class SearchEntrepriseBySectorComponent implements OnInit {
   listEntreprise : Entreprise;
   searchResult ='all';
 ;
-  constructor(private route: ActivatedRoute, private _entrepriseservice: EntrepriseService, private _router: Router) { }
+  constructor(private route: ActivatedRoute, private _entrepriseservice: EntrepriseService) { }
 
 
 

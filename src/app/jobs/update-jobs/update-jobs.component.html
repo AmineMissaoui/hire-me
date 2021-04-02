@@ -31,10 +31,9 @@
                           <input class="form-control" type="number" name="secteurId" placeholder="secteurId"  [(ngModel)]="jobDetail.secteurId">
                       </div>
                       <div class="form-group">
-                        <label class="control-label">Nombre d'employees</label>
-                        <input class="form-control" type="number" name="secteurId" placeholder="secteurId" [(ngModel)]="jobDetail.secteurId">
+                        <label class="control-label">nbrPostes</label>
+                        <input class="form-control" type="number" name="nbrPostes" placeholder="nbrPostes"  [(ngModel)]="jobDetail.nbrPostes">
                     </div>
-
                       <div class="form-group">
                           <label class="control-label">Category</label>
                           <div class="search-category-container">
@@ -57,6 +56,10 @@
                         <label class="control-label">description</label>
                         <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="jobDetail.description">
                         </textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="nbrApplications" [(ngModel)]="jobDetail.nbrApplications">
+                        <input type="hidden" name="viewersNbr" [(ngModel)]="jobDetail.viewersNbr">
                     </div>
                       <input type="submit" value="send"  class="btn btn-common" (click)="save(updateForm)">
                   </form>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { JobSeekerEducation } from 'src/app/model/job-seeker-education.model';
 import { JobSeekerExperience } from 'src/app/model/job-seeker-experience.model';
@@ -11,10 +11,13 @@ import { JobSeekerService } from 'src/app/shared/job-seeker.service';
   styleUrls: ['./detail-job-seeker.component.scss']
 })
 export class DetailJobSeekerComponent implements OnInit {
+  @Output() shareMyId = new EventEmitter();
+
   jobSeekerId : JobSeeker;
   jobSeekerDetail : JobSeeker;
   jobSeekerExperiences : JobSeekerExperience;
   jobSeekerEducations : JobSeekerEducation;
+
   constructor(private route: ActivatedRoute, private _jobsSeekerService: JobSeekerService) { }
 
   ngOnInit(): void {
@@ -33,9 +36,9 @@ export class DetailJobSeekerComponent implements OnInit {
 
     this._jobsSeekerService.getEducations(this.jobSeekerId).subscribe(data =>{
       this.jobSeekerEducations = data;
-      console.log(this.jobSeekerEducations);
     });
-
+    this.shareMyId.emit(this.jobSeekerId);
   }
+
 
 }

@@ -12,6 +12,9 @@ import { JobsService } from '../shared/jobs.service';
 export class JobsComponent implements OnInit {
   listJobs : Jobs ;
   listSectors : Sector;
+  recievedId : number;
+  recievedJob : Jobs;
+  viewersNbr : number;
   constructor(private _entrepriseService: EntrepriseService, private _jobsService: JobsService) { }
 
   ngOnInit(): void {
@@ -19,7 +22,34 @@ export class JobsComponent implements OnInit {
       data => this.listJobs = data);
       this._entrepriseService.getSectors().subscribe( data => {
         this.listSectors = data;
-      })
+      });
   }
+
+
+
+  increase(id){
+    this.recievedId = id;
+    this._jobsService.getJobById(this.recievedId).subscribe(data => {
+      this.recievedJob = data;
+      this.viewersNbr = this.recievedJob[0].viewersNbr;
+      console.log(this.recievedJob[0].viewersNbr)
+
+
+       const updateJob = {
+         title : this.recievedJob[0].title,
+         description : this.recievedJob[0].description,
+         entrepriseId : this.recievedJob[0].entrepriseId,
+        nbrPostes : this.recievedJob[0].nbrPostes,
+        secteurId : this.recievedJob[0].secteurId,
+        nbrApplications : this.recievedJob[0].nbrApplications,
+        viewersNbr : this.recievedJob[0].viewersNbr + 1
+      }
+
+      this._jobsService.updateJob(updateJob, this.recievedId).subscribe()
+    });
+
+  }
+
+
 
 }

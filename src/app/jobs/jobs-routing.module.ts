@@ -6,6 +6,7 @@ import { DetailJobsComponent } from './detail-jobs/detail-jobs.component';
 
 import { JobsComponent } from './jobs.component';
 import { ListJobsComponent } from './list-jobs/list-jobs.component';
+import { SearchJobBySectorComponent } from './search-job-by-sector/search-job-by-sector.component';
 import { UpdateJobsComponent } from './update-jobs/update-jobs.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'delete-job/:id', component: DeleteJobsComponent },
   { path: 'update-job/:id', component: UpdateJobsComponent },
   { path: 'list-job', component: ListJobsComponent },
-  { path: 'detail-job/:id', component: DetailJobsComponent }
+  { path: 'detail-job/:id', component: DetailJobsComponent },
+  { path: 'sector-job/:id', component: SearchJobBySectorComponent },
 ];
 
 @NgModule({

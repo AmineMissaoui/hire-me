@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobSeekerComponent implements OnInit {
 
+recievedId ;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getChildId(data){
+    this.recievedId = data;
+    console.log('my id is ' + this.recievedId);
   }
 
 }

@@ -46,4 +46,14 @@ url = 'http://localhost:3000/entreprise';
     return this.http.get<Sector>(sectorUrl);
   }
 
+  getEntrepriseById(entrepriseId): Observable<Entreprise>{
+    const entrepriseByIdUrl = this.url + '?id=' + entrepriseId;
+    return this.http.get<Entreprise>(entrepriseByIdUrl);
+  }
+
+  getSectorsById(sectorId): Observable<Sector>{
+    const sectorUrlById = 'http://localhost:3000/sector' + '?id=' + sectorId;
+    return this.http.get<Sector>(sectorUrlById);
+  }
+
 }

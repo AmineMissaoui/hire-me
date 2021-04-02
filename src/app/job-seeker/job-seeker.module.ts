@@ -10,6 +10,7 @@ import { DetailJobSeekerComponent } from './detail-job-seeker/detail-job-seeker.
 import { ListJobSeekerComponent } from './list-job-seeker/list-job-seeker.component';
 import { LayoutModule } from '../layout/layout.module';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     JobSeekerRoutingModule,
     LayoutModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class JobSeekerModule { }

@@ -11,11 +11,11 @@ export class ListEntrepriseComponent implements OnInit {
   @Input() listEntreprise;
   @Input() listSectors;
   searchResult ='all';
+  
 
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
-
   }
 
   selectOption(value){

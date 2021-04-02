@@ -1,1 +1,2 @@
-<app-list-jobs [listJobs]="listJobs" [listSectors]="listSectors"></app-list-jobs>
+<app-header></app-header>
+<app-list-jobs [listJobs]="listJobs"  [listSectors]="listSectors" (increaseViewers)="increase($event)" ></app-list-jobs>
