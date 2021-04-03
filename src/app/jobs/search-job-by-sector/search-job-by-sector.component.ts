@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Jobs } from 'src/app/model/jobs.model';
 import { Sector } from 'src/app/model/sector.model';
@@ -11,7 +11,6 @@ import { JobsService } from 'src/app/shared/jobs.service';
   styleUrls: ['./search-job-by-sector.component.scss']
 })
 export class SearchJobBySectorComponent implements OnInit {
-
   listSectors: Sector;
   searchBySector: number;
   listJobs : Jobs;

@@ -67,9 +67,8 @@
         </div>
         <div class="row">
             <div *ngFor="let job of listJobs" class="col-lg-6 col-md-12 col-xs-12">
-                <a class="job-listings-featured" [routerLink]="['/detail-job/' , job.id]">
+                <a class="job-listings-featured" [routerLink]="['/detail-job/' , job.id]" >
                     <div class="row">
-  
                         <div class="col-lg-7 col-md-6 col-xs-12">
                             <div class="job-company-logo">
                                 <img src="../../../assets/img/features/job.jpg" alt="">
@@ -83,7 +82,6 @@
                                 </div>
                             </div>
                         </div>
-  
                         <div class="col-lg-5 col-md-6 col-xs-12 text-right">
                             <div class="tag-type">
                                 <div class="heart-icon">

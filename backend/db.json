@@ -34,8 +34,8 @@
       "entrepriseId": 9,
       "nbrPostes": 10,
       "secteurId": 1,
-      "nbrApplications": 4,
-      "viewersNbr": 33,
+      "nbrApplications": 7,
+      "viewersNbr": 38,
       "id": 2
     },
     {
@@ -51,11 +51,11 @@
     {
       "title": "Financial operator",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus eu tortor volutpat pulvinar vel eget nisl. Ut pretium dictum felis quis pharetra. Nullam vel leo leo. Curabitur quis mattis augue. Nulla quam purus, euismod quis est non, tincidunt lacinia tortor. In vulputate tellus nulla, a eleifend libero vehicula vitae. Morbi dui lacus, aliquet at commodo fermentum, lacinia in dolor. Donec eget dignissim nulla, eget malesuada enim. In ipsum tortor, vestibulum sit amet elit non, efficitur dictum nunc. Nunc iaculis imperdiet justo. Duis risus ligula, ornare eget venenatis ut, vehicula quis orci. Quisque sit amet tortor posuere, viverra lorem eget, consequat turpis. Vestibulum efficitur vitae magna varius aliquam. Mauris scelerisque eu nisi in mattis. In hendrerit blandit dolor non tincidunt. Quisque in accumsan enim, sed viverra tellus.",
-      "entrepriseId": 9,
+      "entrepriseId": 10,
       "nbrPostes": 10,
       "secteurId": 2,
-      "nbrApplications": 3,
-      "viewersNbr": 5,
+      "nbrApplications": 5,
+      "viewersNbr": 9,
       "id": 4
     },
     {
@@ -79,23 +79,13 @@
       "id": 6
     },
     {
-      "title": "QA engineer",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum finibus ante in molestie. Phasellus dictum lorem libero, ac mollis justo vestibulum a. Donec sit amet scelerisque orci, eu hendrerit felis. Ut feugiat eros a risus aliquam auctor. Aenean vitae eros mi. Fusce pellentesque blandit augue a porttitor. Nulla egestas magna et ultrices cursus.\n\nEtiam nec posuere nunc. Vestibulum bibendum lorem vehicula, aliquam purus ut, rutrum justo. Aenean cursus tortor tincidunt, tempus velit eu, maximus purus. Fusce arcu lorem, mattis vitae orci nec, aliquet feugiat odio. Donec eu euismod urna. Aenean imperdiet nulla ac orci dictum finibus. Praesent semper ullamcorper ultricies. Vestibulum consectetur ultrices nisi sit amet rhoncus. Sed imperdiet ultrices libero, sit amet pharetra enim fermentum id. Sed et arcu elementum, aliquet orci tincidunt, mollis ipsum",
-      "entrepriseId": 9,
-      "nbrPostes": 10,
-      "secteurId": 1,
-      "nbrApplications": 0,
-      "viewersNbr": 2,
-      "id": 7
-    },
-    {
-      "title": "chef d'agence 2",
+      "title": "Chef d'agence",
       "description": "test",
-      "entrepriseId": 12,
+      "entrepriseId": 10,
       "nbrPostes": 1,
       "secteurId": 2,
-      "nbrApplications": 0,
-      "viewersNbr": 1,
+      "nbrApplications": 2,
+      "viewersNbr": 2,
       "id": 8
     }
   ],
