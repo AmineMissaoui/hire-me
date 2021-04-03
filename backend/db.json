@@ -37,7 +37,7 @@
       "nbrPostes": 10,
       "secteurId": 1,
       "nbrApplications": 3,
-      "viewersNbr": 16,
+      "viewersNbr": 17,
       "id": 2
     },
     {
@@ -71,13 +71,13 @@
       "id": 5
     },
     {
-      "nbrApplications": 0,
-      "viewersNbr": 0,
       "title": "devOps engineer",
-      "entrepriseId": 9,
-      "secteurId": 1,
-      "nbrPostes": 2,
       "description": "lipsum",
+      "entrepriseId": 9,
+      "nbrPostes": 2,
+      "secteurId": 1,
+      "nbrApplications": 1,
+      "viewersNbr": 2,
       "id": 6
     }
   ],
@@ -241,6 +241,16 @@
       "username": "admin",
       "password": "123456",
       "id": 19
+    },
+    {
+      "username": "admin",
+      "password": "123456",
+      "id": 20
+    },
+    {
+      "username": "admin",
+      "password": "123456",
+      "id": 21
     }
   ]
 }
