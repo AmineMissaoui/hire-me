@@ -20,48 +20,63 @@
                   <form class="form-ad" #updateForm="ngForm">
                       <div class="form-group">
                           <label class="control-label">Raison sociale</label>
-                          <input type="text" class="form-control" name="Nom"  placeholder="Name" [(ngModel)]="entrepriseDetail.raisonSociale" required>
+                          <input type="text" class="form-control" name="raisonSociale" #raisonSociale="ngModel" minlength="2"  placeholder="Raison sociale" [(ngModel)]="entrepriseDetail.raisonSociale" required>
+                      </div>
+                      <div *ngIf="raisonSociale.invalid && (raisonSociale.touched || raisonSociale.dirty)">
+                        <div *ngIf="raisonSociale.errors.required" class="alert alert-danger">
+                          this field is required
+                        </div>
+                        <div *ngIf="raisonSociale.errors.minlength" class="alert alert-danger">
+                          minlength is 2 character
+                        </div>
                       </div>
                       <div class="form-group">
                           <label class="control-label">Adresse</label>
-                          <input type="text" class="form-control" name="Adresse" placeholder="Adresse" [(ngModel)]="entrepriseDetail.adresse">
+                          <input type="text" class="form-control" name="adresse" #adresse="ngModel" placeholder="Adresse" [(ngModel)]="entrepriseDetail.adresse">
+                      </div>
+                      <div *ngIf="adresse.invalid && (adresse.touched || adresse.dirty)">
+                        <div *ngIf="adresse.errors.required" class="alert alert-danger">
+                          this field is required
+                        </div>
                       </div>
                       <div class="form-group">
                           <label class="control-label">Nombre d'employees</label>
-                          <input class="form-control" type="number" name="Nombre employes" placeholder="Nombre d'employés"  [(ngModel)]="entrepriseDetail.nbrEmployee">
+                          <input class="form-control" type="number" name="nbrEmployee" #nbrEmployee="ngModel" placeholder="Nombre d'employés"  [(ngModel)]="entrepriseDetail.nbrEmployee">
+                      </div>
+                      <div *ngIf="nbrEmployee.invalid && (nbrEmployee.touched || nbrEmployee.dirty)">
+                        <div *ngIf="nbrEmployee.errors.required" class="alert alert-danger">
+                          this field is required
+                        </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label">Nombre d'employees</label>
-                        <input class="form-control" type="number" name="Nombre postes" placeholder="Nombre de postes" [(ngModel)]="entrepriseDetail.nbrPostes">
-                    </div>
-                      <div class="form-group">
-                        <label class="control-label">Secteur</label>
-                        <input class="form-control" type="text" name="Secteur" placeholder="Secteur" [(ngModel)]="entrepriseDetail.secteurId">
-                    </div>
-                      <div class="form-group">
-                          <label class="control-label">Category</label>
-                          <div class="search-category-container">
-                              <label class="styled-select">
-                                  <select class="dropdown-product selectpicker">
-                                      <option>All Categories</option>
-                                      <option>Finance</option>
-                                      <option>IT & Engineering</option>
-                                      <option>Education/Training</option>
-                                      <option>Art/Design</option>
-                                      <option>Sale/Markting</option>
-                                      <option>Healthcare</option>
-                                      <option>Science</option>
-                                      <option>Food Services</option>
-                                  </select>
-                              </label>
-                          </div>
+                        <label class="control-label">Category</label>
+                        <div class="search-category-container">
+                          <label class="styled-select">
+                            <select class="dropdown-product selectpicker" (change)="selectOption($event.target.value)">
+                              <option class="text-muted" [value]="sectorName">{{sectorName}}</option>
+                              <option [value]="sector.id" *ngFor="let sector of listSectors">{{sector.name}}</option>
+                            </select>
+                          </label>
+                        </div>
+                      </div>
+                      <input class="form-control" type="hidden" name="secteurId" #secteurId="ngModel" placeholder="secteurId"
+                        [(ngModel)]="entrepriseDetail.secteurId" required>
+                      <div *ngIf="secteurId.invalid && (secteurId.touched || secteurId.dirty)">
+                        <div *ngIf="secteurId.errors.required" class="alert alert-danger">
+                          this field is required
+                        </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label">description</label>
-                        <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="entrepriseDetail.description">
+                        <textarea class="form-control" type="text" name="description" #description="ngModel" placeholder="description" [(ngModel)]="entrepriseDetail.description">
                         </textarea>
+                        <div *ngIf="description.invalid && (description.touched || description.dirty)">
+                            <div *ngIf="description.errors.required" class="alert alert-danger">
+                              this field is required
+                            </div>
+                          </div>
                     </div>
-                      <input type="submit" value="send"  class="btn btn-common" (click)="save(updateForm)">
+                      <input type="submit" value="send" [disabled]="updateForm.invalid" class="btn btn-common" (click)="save(updateForm)">
                   </form>
               </div>
           </div>

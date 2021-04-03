@@ -11,65 +11,91 @@
   </div>
 </div>
 
+
 <section class="section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-9 col-md-12 col-xs-12">
         <div class="post-job box">
-          <h3 class="job-title">Update Job</h3>
+          <h3 class="job-title">Add Job</h3>
           <form class="form-ad" #updateForm="ngForm">
             <div class="form-group">
               <label class="control-label">Title</label>
-              <input type="text" #title="ngModel" class="form-control" name="title" placeholder="Name"
-                [(ngModel)]="jobDetail.title" required>
+              <input type="text" class="form-control" name="title" #title="ngModel" minlength="2" placeholder="Name"
+                [(ngModel)]="jobDetail.title" [ngClass]=" title.invalid ? 'border-danger' : 'border-success'" required>
             </div>
-            <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
-              Name is required
+            <div *ngIf="title.invalid && (title.touched || title.dirty)">
+              <div *ngIf="title.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+              <div *ngIf="title.errors.minlength" class="alert alert-danger">
+                minlength is 2 character
+              </div>
             </div>
             <div class="form-group">
               <label class="control-label">entrepriseId</label>
-              <input type="number" class="form-control" name="entrepriseId" placeholder="entrepriseId"
-                [(ngModel)]="jobDetail.entrepriseId">
+              <input type="number" class="form-control" name="entrepriseId" #entrepriseId="ngModel"
+                placeholder="entrepriseId" [(ngModel)]="jobDetail.entrepriseId" required
+                [ngClass]=" entrepriseId.invalid ? 'border-danger' : 'border-success'">
             </div>
-            <div class="form-group">
-              <label class="control-label">secteurId</label>
-              <input class="form-control" type="number" name="secteurId" placeholder="secteurId"
-                [(ngModel)]="jobDetail.secteurId">
+            <div *ngIf="entrepriseId.invalid && (entrepriseId.touched || entrepriseId.dirty)">
+              <div *ngIf="entrepriseId.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
             </div>
+
             <div class="form-group">
               <label class="control-label">nbrPostes</label>
-              <input class="form-control" type="number" name="nbrPostes" placeholder="nbrPostes"
-                [(ngModel)]="jobDetail.nbrPostes">
+              <input class="form-control" type="number" #nbrPostes="ngModel" name="nbrPostes" placeholder="nbrPostes"
+                [(ngModel)]="jobDetail.nbrPostes" min="0" max="100"
+                [ngClass]=" nbrPostes.invalid ? 'border-danger' : 'border-success'" required>
+            </div>
+            <div *ngIf="nbrPostes.invalid && (nbrPostes.touched || nbrPostes.dirty)">
+              <div *ngIf="nbrPostes.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+              <div *ngIf="nbrPostes.errors.min" class="alert alert-danger">
+                nbrPostes must be > 1
+              </div>
+
             </div>
             <div class="form-group">
               <label class="control-label">Category</label>
               <div class="search-category-container">
                 <label class="styled-select">
-                  <select class="dropdown-product selectpicker">
-                    <option>All Categories</option>
-                    <option>Finance</option>
-                    <option>IT & Engineering</option>
-                    <option>Education/Training</option>
-                    <option>Art/Design</option>
-                    <option>Sale/Markting</option>
-                    <option>Healthcare</option>
-                    <option>Science</option>
-                    <option>Food Services</option>
+                  <select class="dropdown-product selectpicker" (change)="selectOption($event.target.value)">
+                    <option [value]="sectorName">{{sectorName}}</option>
+                    <option [value]="sector.id" *ngFor="let sector of listSectors">{{sector.name}}</option>
                   </select>
                 </label>
               </div>
             </div>
+            <input class="form-control" type="number" name="secteurId" #secteurId="ngModel" placeholder="secteurId"
+              [(ngModel)]="jobDetail.secteurId" required>
+            <div *ngIf="secteurId.invalid && (secteurId.touched || secteurId.dirty)">
+              <div *ngIf="secteurId.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+            </div>
             <div class="form-group">
               <label class="control-label">description</label>
-              <textarea class="form-control" type="text" name="description" placeholder="description"
-                [(ngModel)]="jobDetail.description">
-                        </textarea>
+              <textarea class="form-control" type="text" #description="ngModel" name="description"
+                placeholder="description" [(ngModel)]="jobDetail.description"
+                [ngClass]=" description.invalid ? 'border-danger' : 'border-success'" required>
+                </textarea>
+            </div>
+            <div *ngIf="description.invalid && (description.touched || description.dirty)">
+              <div *ngIf="description.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
             </div>
             <div class="form-group">
               <input type="hidden" name="nbrApplications" [(ngModel)]="jobDetail.nbrApplications">
               <input type="hidden" name="viewersNbr" [(ngModel)]="jobDetail.viewersNbr">
             </div>
-            <input type="submit" value="send" class="btn btn-common" (click)="save(updateForm)">
+
+            <input type="submit" value="send" class="btn btn-common" (click)="save(updateForm)"
+              [disabled]="updateForm.invalid">
           </form>
         </div>
       </div>

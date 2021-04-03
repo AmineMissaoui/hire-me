@@ -4,6 +4,5 @@ export class Entreprise {
     adresse: string;
     secteurId: number;
     nbrEmployee: number;
-    nbrPostes: number;
     description: string;
 }

@@ -1,71 +1,90 @@
 <app-header></app-header>
 <div class="page-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="inner-header">
-                    <h3>Add Entreprise</h3>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="inner-header">
+          <h3>Add Entreprise</h3>
         </div>
+      </div>
     </div>
   </div>
-  
-  <section class="section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 col-md-12 col-xs-12">
-                <div class="post-job box">
-                    <h3 class="job-title">Add Entreprise</h3>
-                    <form class="form-ad" #addForm="ngForm">
-                        <div class="form-group">
-                            <label class="control-label">Raison sociale</label>
-                            <input type="text" class="form-control" name="Nom"  placeholder="Name" [(ngModel)]="Entreprise.raisonSociale" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Adresse</label>
-                            <input type="text" class="form-control" name="Adresse" placeholder="Adresse" [(ngModel)]="Entreprise.adresse">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Nombre d'employees</label>
-                            <input class="form-control" type="number" name="Nombre employes" placeholder="Nombre d'employés"  [(ngModel)]="Entreprise.nbrEmployee">
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label">Nombre d'employees</label>
-                          <input class="form-control" type="number" name="Nombre postes" placeholder="Nombre de postes" [(ngModel)]="Entreprise.nbrPostes">
-                      </div>
-                        <div class="form-group">
-                          <label class="control-label">Secteur</label>
-                          <input class="form-control" type="text" name="Secteur" placeholder="Secteur" [(ngModel)]="Entreprise.secteurId">
-                      </div>
-                        <div class="form-group">
-                            <label class="control-label">Category</label>
-                            <div class="search-category-container">
-                                <label class="styled-select">
-                                    <select class="dropdown-product selectpicker">
-                                        <option>All Categories</option>
-                                        <option>Finance</option>
-                                        <option>IT & Engineering</option>
-                                        <option>Education/Training</option>
-                                        <option>Art/Design</option>
-                                        <option>Sale/Markting</option>
-                                        <option>Healthcare</option>
-                                        <option>Science</option>
-                                        <option>Food Services</option>
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label">description</label>
-                          <textarea class="form-control" type="text" name="description" placeholder="description" [(ngModel)]="Entreprise.description">
-                          </textarea>
-                      </div>
-                        <input type="submit" value="send"  class="btn btn-common" (click)="save(addForm)">
-                    </form>
-                </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-md-12 col-xs-12">
+        <div class="post-job box">
+          <h3 class="job-title">Add Entreprise</h3>
+          <form class="form-ad" #addForm="ngForm">
+            <div class="form-group">
+              <label class="control-label">Raison sociale</label>
+              <input type="text" class="form-control" #raisonSociale="ngModel" name="raisonSociale"
+                placeholder="Raison sociale" minlength="2" [(ngModel)]="Entreprise.raisonSociale" [ngClass]="raisonSociale.invalid ? 'border-danger' : 'border-success'" required>
             </div>
+            <div *ngIf="raisonSociale.invalid && (raisonSociale.touched || raisonSociale.dirty)">
+              <div *ngIf="raisonSociale.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+              <div *ngIf="raisonSociale.errors.minlength" class="alert alert-danger">
+                minlength is 2 character
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Adresse</label>
+              <input type="text" class="form-control" #adresse="ngModel" name="adresse" placeholder="Adresse"
+                [(ngModel)]="Entreprise.adresse" required>
+            </div>
+            <div *ngIf="adresse.invalid && (adresse.touched || adresse.dirty)">
+              <div *ngIf="adresse.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Nombre d'employees</label>
+              <input class="form-control" type="number" #nbrEmployee="ngModel" name="nbrEmployee"
+                placeholder="Nombre d'employés" [(ngModel)]="Entreprise.nbrEmployee" required>
+            </div>
+            <div *ngIf="nbrEmployee.invalid && (nbrEmployee.touched || nbrEmployee.dirty)">
+              <div *ngIf="nbrEmployee.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Category</label>
+              <div class="search-category-container">
+                <label class="styled-select">
+                  <select class="dropdown-product selectpicker" (change)="selectOption($event.target.value)">
+                    <option value="all">All Categories</option>
+                    <option [value]="sector.id" *ngFor="let sector of listSectors">{{sector.name}}</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <input class="form-control" type="hidden" name="secteurId" #secteurId="ngModel" placeholder="secteurId"
+              [(ngModel)]="Entreprise.secteurId" required>
+            <div *ngIf="secteurId.invalid && (secteurId.touched || secteurId.dirty)">
+              <div *ngIf="secteurId.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">description</label>
+              <textarea class="form-control" type="text" #description="ngModel" name="description"
+                placeholder="description" [(ngModel)]="Entreprise.description">
+            </textarea>
+            </div>
+            <div *ngIf="description.invalid && (description.touched || description.dirty)">
+              <div *ngIf="description.errors.required" class="alert alert-danger">
+                this field is required
+              </div>
+            </div>
+            <input type="submit" value="send" class="btn btn-common" (click)="save(addForm)"
+              [disabled]="addForm.invalid">
+          </form>
         </div>
+      </div>
     </div>
-  </section>
-  
+  </div>
+</section>

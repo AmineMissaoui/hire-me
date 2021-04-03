@@ -17,7 +17,7 @@ export class AddJobsComponent implements OnInit {
   nbrApplications : number ;
   viewersNbr : number;
   listSectors : Sector;
-  sectorId : number;
+  sectorId : string;
 
   constructor(private _jobsService: JobsService, private _router: Router, private _entrepriseService : EntrepriseService) { }
 
@@ -31,9 +31,8 @@ export class AddJobsComponent implements OnInit {
   }
 
   selectOption(value){
-    console.log(value);
       this.sectorId = value;
-      this.job.secteurId = this.sectorId;
+      this.job.secteurId = parseInt(this.sectorId);
   }
 
 

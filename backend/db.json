@@ -1,22 +1,20 @@
 {
   "entreprise": [
     {
-      "raisonSociale": "lipp",
-      "adresse": "chageya",
-      "nbrEmployee": 200,
-      "nbrPostes": 300,
-      "secteurId": "2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor.",
-      "id": 10
-    },
-    {
       "raisonSociale": "vermeg",
-      "adresse": "lac 1",
-      "nbrEmployee": 30,
-      "nbrPostes": 30,
-      "secteurId": "1",
+      "adresse": "lac 1 , tunis",
+      "nbrEmployee": 300,
+      "secteurId": 1,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac orci aliquam nisl lobortis volutpat in at odio. Etiam nunc magna, elementum eu urna sed, sagittis egestas purus. Suspendisse vel condimentum est. Maecenas sed enim ac risus fermentum faucibus. Aliquam eu purus nec ex hendrerit dapibus. Ut quis porta enim. Nulla blandit nibh ut sodales malesuada. Pellentesque felis dolor, euismod vel ex ac, bibendum dapibus nisl. In mauris urna, pulvinar sit amet suscipit eu, molestie ac nunc. Etiam dictum eget justo ut tempus. Nullam at purus sed velit commodo vestibulum. Donec sit amet odio tortor.",
       "id": 9
+    },
+    {
+      "raisonSociale": "BIAT",
+      "adresse": "AV Habib Bourgiba",
+      "nbrEmployee": 3000,
+      "secteurId": 2,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada lacus at risus viverra tristique. Vivamus ullamcorper turpis leo, in gravida eros pellentesque malesuada. Morbi nunc urna, semper interdum sapien nec, tempor fringilla dolor. Curabitur posuere odio id ullamcorper lobortis. Vestibulum felis quam, congue sit amet dui eget, auctor lacinia nulla. Ut nec dolor porta elit interdum egestas non ac sem. Proin rhoncus iaculis orci, non condimentum dui molestie tempor. Nunc tempor vehicula nisi. Aenean vel lacus quis ex efficitur aliquet. Vivamus maximus eros vel ex bibendum scelerisque non id ligula.",
+      "id": 10
     }
   ],
   "sector": [
@@ -31,13 +29,13 @@
   ],
   "job": [
     {
-      "title": "ux design",
+      "title": "UX Designer",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus eu tortor volutpat pulvinar vel eget nisl. Ut pretium dictum felis quis pharetra. Nullam vel leo leo. Curabitur quis mattis augue. Nulla quam purus, euismod quis est non, tincidunt lacinia tortor. In vulputate tellus nulla, a eleifend libero vehicula vitae. Morbi dui lacus, aliquet at commodo fermentum, lacinia in dolor. Donec eget dignissim nulla, eget malesuada enim. In ipsum tortor, vestibulum sit amet elit non, efficitur dictum nunc. Nunc iaculis imperdiet justo. Duis risus ligula, ornare eget venenatis ut, vehicula quis orci. Quisque sit amet tortor posuere, viverra lorem eget, consequat turpis. Vestibulum efficitur vitae magna varius aliquam. Mauris scelerisque eu nisi in mattis. In hendrerit blandit dolor non tincidunt. Quisque in accumsan enim, sed viverra tellus.",
       "entrepriseId": 9,
       "nbrPostes": 10,
       "secteurId": 1,
-      "nbrApplications": 3,
-      "viewersNbr": 17,
+      "nbrApplications": 4,
+      "viewersNbr": 33,
       "id": 2
     },
     {
@@ -57,7 +55,7 @@
       "nbrPostes": 10,
       "secteurId": 2,
       "nbrApplications": 3,
-      "viewersNbr": 3,
+      "viewersNbr": 5,
       "id": 4
     },
     {
@@ -79,6 +77,26 @@
       "nbrApplications": 1,
       "viewersNbr": 2,
       "id": 6
+    },
+    {
+      "title": "QA engineer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum finibus ante in molestie. Phasellus dictum lorem libero, ac mollis justo vestibulum a. Donec sit amet scelerisque orci, eu hendrerit felis. Ut feugiat eros a risus aliquam auctor. Aenean vitae eros mi. Fusce pellentesque blandit augue a porttitor. Nulla egestas magna et ultrices cursus.\n\nEtiam nec posuere nunc. Vestibulum bibendum lorem vehicula, aliquam purus ut, rutrum justo. Aenean cursus tortor tincidunt, tempus velit eu, maximus purus. Fusce arcu lorem, mattis vitae orci nec, aliquet feugiat odio. Donec eu euismod urna. Aenean imperdiet nulla ac orci dictum finibus. Praesent semper ullamcorper ultricies. Vestibulum consectetur ultrices nisi sit amet rhoncus. Sed imperdiet ultrices libero, sit amet pharetra enim fermentum id. Sed et arcu elementum, aliquet orci tincidunt, mollis ipsum",
+      "entrepriseId": 9,
+      "nbrPostes": 10,
+      "secteurId": 1,
+      "nbrApplications": 0,
+      "viewersNbr": 2,
+      "id": 7
+    },
+    {
+      "title": "chef d'agence 2",
+      "description": "test",
+      "entrepriseId": 12,
+      "nbrPostes": 1,
+      "secteurId": 2,
+      "nbrApplications": 0,
+      "viewersNbr": 1,
+      "id": 8
     }
   ],
   "jobSeeker": [
@@ -171,86 +189,6 @@
       "username": "admin",
       "password": "123456",
       "id": 5
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 6
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 7
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 8
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 9
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 11
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 12
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 13
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 14
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 15
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 16
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 17
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 18
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 19
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 20
-    },
-    {
-      "username": "admin",
-      "password": "123456",
-      "id": 21
     }
   ]
 }

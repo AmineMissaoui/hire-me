@@ -56,26 +56,25 @@
               <div *ngIf="nbrPostes.errors.min" class="alert alert-danger">
                 nbrPostes must be > 1
               </div>
-
             </div>
             <div class="form-group">
               <label class="control-label">Category</label>
               <div class="search-category-container">
                 <label class="styled-select">
-                    <select  class="dropdown-product selectpicker"  (change)="selectOption($event.target.value)">
-                        <option value="all">All Categories</option>
-                        <option [value]="sector.id" *ngFor="let sector of listSectors">{{sector.name}}</option>
-                    </select>
+                  <select class="dropdown-product selectpicker" (change)="selectOption($event.target.value)">
+                    <option value="all">All Categories</option>
+                    <option [value]="sector.id" *ngFor="let sector of listSectors">{{sector.name}}</option>
+                  </select>
                 </label>
               </div>
             </div>
             <input class="form-control" type="hidden" name="secteurId" #secteurId="ngModel" placeholder="secteurId"
-            [(ngModel)]="job.secteurId" required>
+              [(ngModel)]="job.secteurId" required>
             <div *ngIf="secteurId.invalid && (secteurId.touched || secteurId.dirty)">
-                <div *ngIf="secteurId.errors.required" class="alert alert-danger">
-                  this field is required
-                </div>
+              <div *ngIf="secteurId.errors.required" class="alert alert-danger">
+                this field is required
               </div>
+            </div>
             <div class="form-group">
               <label class="control-label">description</label>
               <textarea class="form-control" type="text" #description="ngModel" name="description"
@@ -92,7 +91,6 @@
               <input type="hidden" name="nbrApplications" [(ngModel)]="job.nbrApplications">
               <input type="hidden" name="viewersNbr" [(ngModel)]="job.viewersNbr">
             </div>
-
             <input type="submit" value="send" class="btn btn-common" (click)="save(addForm)"
               [disabled]="addForm.invalid">
           </form>
@@ -101,4 +99,6 @@
     </div>
   </div>
 </section>
+
+
 <app-footer></app-footer>

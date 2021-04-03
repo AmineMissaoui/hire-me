@@ -12,10 +12,7 @@ const routes: Routes = [{ path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'jobs', loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule) },
   { path: 'job-seeker', loadChildren: () => import('./job-seeker/job-seeker.module').then(m => m.JobSeekerModule) },
   { path: 'entreprise', loadChildren: () => import('./entreprise/entreprise.module').then(m => m.EntrepriseModule) },
-  // {
-  //   path: '**',
-  //   component: NotFoundComponent,
-  // },
+  /* { path: '**', component: NotFoundComponent}*/
 ];
 
 @NgModule({
